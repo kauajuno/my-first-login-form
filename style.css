@@ -1,0 +1,65 @@
+body,
+body::before,
+body::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darkslategrey;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+form {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5vmin;
+  border-radius: 1vmin;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+#toast-box {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.toast {
+  width: 25vw;
+  height: 10vh;
+  font-weight: 700;
+  margin: 15px 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+}
+
+.toast i {
+  margin: 0 20px;
+  font-size: 2rem;
+}
+
+.toast.warn i {
+  color: yellow;
+}
+
+.toast.error i {
+  color: red;
+}
+
+.toast.sucess i {
+  color: green;
+}
