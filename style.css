@@ -1,3 +1,7 @@
+* {
+  border: none;
+}
+
 body,
 body::before,
 body::after {
@@ -6,7 +10,7 @@ body::after {
 }
 
 body {
-  background-color: darkslategrey;
+  background-color: #041004;
   color: white;
   display: flex;
   justify-content: center;
@@ -19,11 +23,24 @@ form {
   background-color: rgba(255, 255, 255, 0.2);
   padding: 5vmin;
   border-radius: 1vmin;
+  display: flex;
+  flex-direction: column;
+  gap: 3vmin;
+  font-size: 1.2rem;
 }
 
 form > div {
   display: flex;
   flex-direction: column;
+}
+
+label {
+  margin-bottom: 4px;
+}
+
+input {
+  padding: 8px;
+  border-radius: 4px;
 }
 
 #toast-box {
@@ -40,11 +57,13 @@ form > div {
 .toast {
   width: 25vw;
   height: 10vh;
-  font-weight: 700;
+  font-weight: 500;
   margin: 15px 0;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
+  background-color: #677969;
+  border-radius: 8px;
 }
 
 .toast i {
@@ -62,4 +81,13 @@ form > div {
 
 .toast.sucess i {
   color: green;
+}
+
+button {
+  padding: 1vmin;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #041004;
+  width: 100%;
+  border-radius: 4px;
 }
