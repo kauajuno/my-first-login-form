@@ -32,4 +32,8 @@ form.addEventListener('submit', (e) => {
     toast.innerHTML = sucessIcon + 'Account created successfully'
     tBox.appendChild(toast)
   }
+
+  setTimeout(() => {
+    toast.remove()
+  }, 5000)
 })
