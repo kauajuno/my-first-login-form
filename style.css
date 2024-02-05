@@ -118,6 +118,14 @@ button:hover {
   animation: toastanim 5s linear forwards;
 }
 
+.toast.error::after {
+  background-color: red;
+}
+
+.toast.warn::after {
+  background-color: #d66400;
+}
+
 @keyframes toastanim {
   100% {
     width: 0;
