@@ -10,8 +10,10 @@ body::after {
 }
 
 body {
-  background-color: #041004;
-  color: white;
+  --background-color: #f0f0f0;
+  --text-color: #0a0a0a;
+  background-color: var(--background-color);
+  color: var(--text-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,8 +22,10 @@ body {
 }
 
 form {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(28, 28, 28, 0.9);
+  color: var(--background-color);
   padding: 5vmin;
+  width: 20vw;
   border-radius: 1vmin;
   display: flex;
   flex-direction: column;
@@ -36,6 +40,7 @@ form > div {
 
 label {
   margin-bottom: 4px;
+  font-weight: 700;
 }
 
 input {
@@ -62,7 +67,8 @@ input {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
-  background-color: #677969;
+  background-color: #f6f6f6;
+  color: #0a0a0a;
   border-radius: 8px;
 }
 
@@ -72,22 +78,30 @@ input {
 }
 
 .toast.warn i {
-  color: yellow;
+  color: #d66400;
 }
 
 .toast.error i {
   color: red;
 }
 
-.toast.sucess i {
+.toast.success i {
   color: green;
 }
 
 button {
-  padding: 1vmin;
+  padding: 2vmin;
   font-size: 1.2rem;
   font-weight: 600;
   color: #041004;
   width: 100%;
   border-radius: 4px;
+  transition: 200ms ease-in;
+}
+
+button:hover {
+  transform: scale(1.02);
+  background-color: #d66400;
+  color: var(--background-color);
+  cursor: pointer;
 }
