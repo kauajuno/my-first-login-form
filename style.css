@@ -1,3 +1,13 @@
+:root {
+  --background-color: #f0f0f0;
+  --text-color: #0a0a0a;
+  --form-background-color: rgba(28, 28, 28, 0.9);
+  --form-background-color-dm: rgba(230, 230, 230, 0.9);
+  --warn-color: #d66400;
+  --success-color: green;
+  --error-color: red;
+}
+
 * {
   border: none;
 }
@@ -10,8 +20,6 @@ body::after {
 }
 
 body {
-  --background-color: #f0f0f0;
-  --text-color: #0a0a0a;
   background-color: var(--background-color);
   color: var(--text-color);
   display: flex;
@@ -21,8 +29,34 @@ body {
   position: relative;
 }
 
+body.dark {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+
+#dark-mode-toggle {
+  position: absolute;
+  left: 1vmin;
+  top: 1vmin;
+  width: 4vw;
+  height: 4vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  color: var(--warn-color);
+  cursor: pointer;
+}
+
+.dark #dark-mode-toggle {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  box-shadow: 0 0 4px rgba(230, 230, 230, 0.9);
+}
+
 form {
-  background-color: rgba(28, 28, 28, 0.9);
+  background-color: var(--form-background-color);
   color: var(--background-color);
   padding: 5vmin;
   width: 20vw;
@@ -31,6 +65,11 @@ form {
   flex-direction: column;
   gap: 3vmin;
   font-size: 1.2rem;
+}
+
+.dark form {
+  background-color: var(--form-background-color-dm);
+  color: var(--text-color);
 }
 
 form > div {
@@ -69,8 +108,8 @@ input {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
-  background-color: #f6f6f6;
-  color: #0a0a0a;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .toast i {
@@ -79,15 +118,15 @@ input {
 }
 
 .toast.warn i {
-  color: #d66400;
+  color: var(--warn-color);
 }
 
 .toast.error i {
-  color: red;
+  color: var(--error-color);
 }
 
 .toast.success i {
-  color: green;
+  color: var(--success-color);
 }
 
 button {
@@ -102,7 +141,7 @@ button {
 
 button:hover {
   transform: scale(1.02);
-  background-color: #d66400;
+  background-color: var(--warn-color);
   color: var(--background-color);
   cursor: pointer;
 }
